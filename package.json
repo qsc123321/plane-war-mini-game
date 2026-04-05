@@ -4,9 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open /dev.html",
     "build": "vite build",
-    "preview": "vite preview"
+    "build:direct-open": "vite build --config vite.config.ts --mode direct-open && node scripts/sync-direct-open-bundle.mjs",
+    "preview": "vite preview --open /dev.html"
   },
   "devDependencies": {
     "typescript": "^5.5.4",
